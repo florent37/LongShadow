@@ -34,12 +34,12 @@ INSERT IMAGE
 
 <a href='https://ko-fi.com/A160LCC' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi1.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
 
-[ ![Download](https://api.bintray.com/packages/florent37/maven/rxlifecycle/images/download.svg) ](https://bintray.com/florent37/maven/rxlifecycle/_latestVersion)
+[ ![Download](https://api.bintray.com/packages/florent37/maven/longshadow/images/download.svg) ](https://bintray.com/florent37/maven/longshadow/_latestVersion)
 
 ```java
 dependencies {
 
-    compile 'com.github.florent37:rxlifecycle:(lastversion)'
+    compile 'com.github.florent37:longshadow:(lastversion)'
 
     compile "com.android.support:appcompat-v7:26.1.0"
     
