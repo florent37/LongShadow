@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <declare-styleable name="LongShadow">
+        <attr name="shadow_color" format="color"/>
+        <attr name="shadow_angle" format="integer"/>
+    </declare-styleable>
+</resources>
