@@ -2,7 +2,7 @@
 
 Add a long shadow on any Android View
 
-[![gif](https://raw.githubusercontent.com/florent37/LongShadow/master/media/longshadow.gif)](https://github.com/florent37/LongShadow)
+[![gif](https://raw.githubusercontent.com/florent37/LongShadow/master/media/sample.gif)](https://github.com/florent37/LongShadow)
 
 INSERT IMAGE
 
