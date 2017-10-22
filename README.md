@@ -8,7 +8,7 @@ Add a long shadow on any Android View
   <img alt="Android app on Google Play" src="https://developer.android.com/images/brand/en_app_rgb_wo_45.png" />
 </a>
 
-```
+```xml
 <com.github.florent37.longshadow.LongShadow
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -52,7 +52,7 @@ You can add a long shadow on any view, even custom views
 
 [![gif](https://raw.githubusercontent.com/florent37/LongShadow/master/medias/sample2.png)](https://github.com/florent37/LongShadow)
 
-```
+```xml
 <com.github.florent37.longshadow.LongShadow
         android:layout_width="match_parent"
         android:layout_height="100dp"
