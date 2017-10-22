@@ -116,8 +116,21 @@ public class LongShadow extends FrameLayout {
     public void onDraw(Canvas canvas) {
         bitmap = loadBitmapFromView();
         if (bitmap != null) {
-            double completeX = getHeight() / Math.tan(Math.toRadians(shadowAngle));
-            if (shadowAngle > 180) {
+            double completeX;
+            if (shadowAngle != 0) {
+                completeX = getHeight() / Math.tan(Math.toRadians(shadowAngle));
+            } else {
+                completeX = 0;
+            }
+            if (shadowAngle == 0) {
+                for (int x = 0; x < getWidth(); ++x) {
+                    canvas.drawBitmap(bitmap, x, 0, mPaint);
+                }
+            } else if (shadowAngle == 180) {
+                for (int x = getWidth(); x > 0; --x) {
+                    canvas.drawBitmap(bitmap, -x, 0, mPaint);
+                }
+            } else if (shadowAngle > 180) {
                 for (int y = getHeight(); y >= 0; --y) {
                     double percent = y * 1f / getHeight();
                     float x = -1 * (float) (completeX * percent);
