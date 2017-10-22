@@ -73,7 +73,7 @@ public class LongShadow extends FrameLayout {
         if (shadowColor != value) {
             shadowColor = value;
             shadowAlpha = Color.alpha(shadowColor);
-            mPaint.setAlpha((int) (shadowAlpha * 255));
+            //mPaint.setAlpha((int) (shadowAlpha * 255));
             mPaint.setColor(shadowColor);
             mPaint.setColorFilter(new PorterDuffColorFilter(shadowColor, PorterDuff.Mode.SRC_IN));
             postInvalidate();
@@ -122,6 +122,12 @@ public class LongShadow extends FrameLayout {
             } else {
                 completeX = 0;
             }
+
+            float pas = 1;
+            if (shadowAngle < 5 || (shadowAngle > 175 && shadowAngle < 185) || (shadowAngle > 355 && shadowAngle < 360)) {
+                pas = 0.1f;
+            }
+
             if (shadowAngle == 0) {
                 for (int x = 0; x < getWidth(); ++x) {
                     canvas.drawBitmap(bitmap, x, 0, mPaint);
@@ -131,13 +137,13 @@ public class LongShadow extends FrameLayout {
                     canvas.drawBitmap(bitmap, -x, 0, mPaint);
                 }
             } else if (shadowAngle > 180) {
-                for (int y = getHeight(); y >= 0; --y) {
+                for (float y = getHeight(); y >= 0; y-= pas) {
                     double percent = y * 1f / getHeight();
                     float x = -1 * (float) (completeX * percent);
                     canvas.drawBitmap(bitmap, x, -y, mPaint);
                 }
             } else {
-                for (int y = 0; y < getHeight(); ++y) {
+                for (float y = 0; y < getHeight(); y+= pas) {
                     double percent = y * 1f / getHeight();
                     float x = (float) (completeX * percent);
                     canvas.drawBitmap(bitmap, x, y, mPaint);

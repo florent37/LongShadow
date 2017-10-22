@@ -41,4 +41,32 @@
         android:layout_height="wrap_content"
         android:gravity="center"/>
 
+    <com.github.florent37.longshadow.LongShadow
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/shadow2"
+        app:shadow_angle="60"
+        app:shadow_color="#406694"
+        android:background="#55a9ca">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="70dp"
+            app:srcCompat="@drawable/ic_android_white_24dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="70dp"
+            app:srcCompat="@drawable/ic_android_white_24dp" />
+
+
+    </com.github.florent37.longshadow.LongShadow>
+
+
 </LinearLayout>

@@ -3,10 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/LongShadow.iml" filepath="$PROJECT_DIR$/LongShadow.iml" />
-      <module fileurl="file://$PROJECT_DIR$/LongShadow.iml" filepath="$PROJECT_DIR$/LongShadow.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/longshadow/longshadow.iml" filepath="$PROJECT_DIR$/longshadow/longshadow.iml" />
       <module fileurl="file://$PROJECT_DIR$/longshadow/longshadow.iml" filepath="$PROJECT_DIR$/longshadow/longshadow.iml" />
     </modules>
   </component>
