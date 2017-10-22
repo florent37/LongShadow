@@ -51,10 +51,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+        /*
         final ObjectAnimator animator = ObjectAnimator.ofFloat(shadowFrameLayout2, "shadowAngle", 0, 360);
         animator.setRepeatCount(ValueAnimator.INFINITE);
         animator.setInterpolator(new LinearInterpolator());
         animator.setDuration(3000);
         animator.start();
+        */
     }
 }
