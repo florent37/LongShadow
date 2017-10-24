@@ -1,5 +1,7 @@
 # LongShadow
 
+[![Android Arsenal]( https://img.shields.io/badge/Android%20Arsenal-LongShadow-green.svg?style=flat )]( https://android-arsenal.com/details/1/6363 )
+
 Add a long shadow on any Android View
 
 [![gif](https://raw.githubusercontent.com/florent37/LongShadow/master/medias/sample.gif)](https://github.com/florent37/LongShadow)
