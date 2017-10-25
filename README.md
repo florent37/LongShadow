@@ -38,13 +38,7 @@ Add a long shadow on any Android View
 
 ```java
 dependencies {
-
     compile 'com.github.florent37:longshadow:(lastversion)'
-
-    compile "com.android.support:appcompat-v7:26.1.0"
-    
-    compile 'io.reactivex.rxjava2:rxjava:2.1.0'
-    
 }
 ```
 
