@@ -1,5 +1,7 @@
 # LongShadow
 
+[![Android Arsenal]( https://img.shields.io/badge/Android%20Arsenal-LongShadow-green.svg?style=flat )]( https://android-arsenal.com/details/1/6363 )
+
 Add a long shadow on any Android View
 
 [![gif](https://raw.githubusercontent.com/florent37/LongShadow/master/medias/sample.gif)](https://github.com/florent37/LongShadow)
@@ -8,7 +10,7 @@ Add a long shadow on any Android View
   <img alt="Android app on Google Play" src="https://developer.android.com/images/brand/en_app_rgb_wo_45.png" />
 </a>
 
-```
+```xml
 <com.github.florent37.longshadow.LongShadow
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -44,6 +46,40 @@ dependencies {
     compile 'io.reactivex.rxjava2:rxjava:2.1.0'
     
 }
+```
+
+# Any View
+
+You can add a long shadow on any view, even custom views
+
+[![gif](https://raw.githubusercontent.com/florent37/LongShadow/master/medias/sample2.png)](https://github.com/florent37/LongShadow)
+
+```xml
+<com.github.florent37.longshadow.LongShadow
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/shadow2"
+        app:shadow_angle="140"
+        app:shadow_color="#406694"
+        android:background="#55a9ca">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="70dp"
+            app:srcCompat="@drawable/ic_android_white_24dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="70dp"
+            app:srcCompat="@drawable/ic_android_white_24dp" />
+
+</com.github.florent37.longshadow.LongShadow>
 ```
 
 # Credits

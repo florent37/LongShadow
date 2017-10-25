@@ -1,7 +1,10 @@
 package com.github.florent37.longshadow.sample;
 
+import android.animation.ObjectAnimator;
+import android.animation.ValueAnimator;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.animation.LinearInterpolator;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
@@ -17,6 +20,9 @@ public class MainActivity extends AppCompatActivity {
 
     @BindView(R.id.shadow)
     LongShadow shadowFrameLayout;
+
+    @BindView(R.id.shadow2)
+    LongShadow shadowFrameLayout2;
 
     @BindView(R.id.seekbar)
     SeekBar seekbar;
@@ -44,5 +50,14 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+
+        /*
+        final ObjectAnimator animator = ObjectAnimator.ofFloat(shadowFrameLayout2, "shadowAngle", 0, 360);
+        animator.setRepeatCount(ValueAnimator.INFINITE);
+        animator.setInterpolator(new LinearInterpolator());
+        animator.setDuration(3000);
+        animator.start();
+        */
     }
 }
