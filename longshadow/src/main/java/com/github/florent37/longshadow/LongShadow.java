@@ -13,8 +13,6 @@ import android.view.View;
 import android.view.ViewTreeObserver;
 import android.widget.FrameLayout;
 
-import com.github.florent37.longshadow.R;
-
 public class LongShadow extends FrameLayout {
 
     private final static int DEFAULT_SHADOW_COLOR = Color.parseColor("#739440");
@@ -25,7 +23,10 @@ public class LongShadow extends FrameLayout {
     private int shadowColor = -1;
     private float shadowAlpha = 1;
     private float shadowAngle = -1;
+
+    // Canvas for child views
     private Bitmap bitmap;
+    private Canvas canvas;
 
     public LongShadow(Context context) {
         this(context, null);
@@ -65,6 +66,19 @@ public class LongShadow extends FrameLayout {
         });
     }
 
+    @Override
+    protected void onSizeChanged(int w, int h, int oldw, int oldh) {
+        super.onSizeChanged(w, h, oldw, oldh);
+        if(w != 0 && h != 0) {
+            createBitmap();
+        }
+    }
+
+    private void createBitmap() {
+        bitmap = Bitmap.createBitmap(getWidth(), getHeight(), Bitmap.Config.ARGB_8888);
+        canvas = new Canvas(bitmap);
+    }
+
     public int getShadowColor() {
         return shadowColor;
     }
@@ -91,31 +105,24 @@ public class LongShadow extends FrameLayout {
         }
     }
 
-    public Bitmap loadBitmapFromView() {
-        final int width = getWidth();
-        final int height = getHeight();
-        if (width > 0 && height > 0) {
-            final Bitmap b = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
-            final Canvas c = new Canvas(b);
+    public boolean drawChildrenOnBitmap() {
+        if (bitmap != null) {
             final int childCount = getChildCount();
             for (int i = 0; i < childCount; ++i) {
                 final View v = getChildAt(i);
-                c.save();
-                c.translate(v.getLeft(), v.getTop());
-                v.draw(c);
-                c.restore();
+                canvas.save();
+                canvas.translate(v.getLeft(), v.getTop());
+                v.draw(canvas);
+                canvas.restore();
             }
-
-            return b;
-        } else {
-            return null;
+            return true;
         }
+        return false;
     }
 
     @Override
     public void onDraw(Canvas canvas) {
-        bitmap = loadBitmapFromView();
-        if (bitmap != null) {
+        if (drawChildrenOnBitmap()) {
             double completeX;
             if (shadowAngle != 0) {
                 completeX = getHeight() / Math.tan(Math.toRadians(shadowAngle));
