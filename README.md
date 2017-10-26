@@ -4,6 +4,10 @@
 
 Add a long shadow on any Android View
 
+<a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/iqkQGAc2EFNdScAzpwZr1Sdy/florent37/LongShadow'>
+  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/iqkQGAc2EFNdScAzpwZr1Sdy/florent37/LongShadow.svg' />
+</a>
+
 [![gif](https://raw.githubusercontent.com/florent37/LongShadow/master/medias/sample.gif)](https://github.com/florent37/LongShadow)
 
 <a href="https://play.google.com/store/apps/details?id=com.github.florent37.florent.champigny">
